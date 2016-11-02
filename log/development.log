@@ -2720,3 +2720,152 @@ Processing by FoodsController#show as HTML
 Completed 200 OK in 657ms (Views: 17.3ms | ActiveRecord: 1.0ms)
 
 
+DEPRECATION WARNING: Passing strings or symbols to the middleware builder is deprecated, please change
+them to actual class references.  For example:
+
+  "Rack::Cors" => Rack::Cors
+
+ (called from <top (required)> at /Users/marksweet/wdi/projects/project3/config/environment.rb:5)
+Started POST "/foods" for 127.0.0.1 at 2016-11-02 15:51:57 -0400
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from raise_in_transactional_callbacks= at /Users/marksweet/.rvm/gems/ruby-2.3.1/gems/activerecord-5.0.0.1/lib/active_record/transactions.rb:283)
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by FoodsController#create as HTML
+  Parameters: {"location"=>"rockville", "food"=>{"location"=>"rockville"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "foods" ("location", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["location", "rockville"], ["created_at", 2016-11-02 19:51:57 UTC], ["updated_at", 2016-11-02 19:51:57 UTC]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 596ms (Views: 0.8ms | ActiveRecord: 9.5ms)
+
+
+Started GET "/foods/9" for 127.0.0.1 at 2016-11-02 15:51:58 -0400
+Processing by FoodsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mFood Load (0.5ms)[0m  [1m[34mSELECT  "foods".* FROM "foods" WHERE "foods"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+Completed 200 OK in 603ms (Views: 16.2ms | ActiveRecord: 0.8ms)
+
+
+DEPRECATION WARNING: Passing strings or symbols to the middleware builder is deprecated, please change
+them to actual class references.  For example:
+
+  "Rack::Cors" => Rack::Cors
+
+ (called from <top (required)> at /Users/marksweet/wdi/projects/project3/config/environment.rb:5)
+Started GET "/foods/9" for 127.0.0.1 at 2016-11-02 15:57:01 -0400
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from raise_in_transactional_callbacks= at /Users/marksweet/.rvm/gems/ruby-2.3.1/gems/activerecord-5.0.0.1/lib/active_record/transactions.rb:283)
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by FoodsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mFood Load (0.5ms)[0m  [1m[34mSELECT  "foods".* FROM "foods" WHERE "foods"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+Completed 200 OK in 934ms (Views: 19.3ms | ActiveRecord: 7.9ms)
+
+
+DEPRECATION WARNING: Passing strings or symbols to the middleware builder is deprecated, please change
+them to actual class references.  For example:
+
+  "Rack::Cors" => Rack::Cors
+
+ (called from <top (required)> at /Users/marksweet/wdi/projects/project3/config/environment.rb:5)
+DEPRECATION WARNING: Passing strings or symbols to the middleware builder is deprecated, please change
+them to actual class references.  For example:
+
+  "Rack::Cors" => Rack::Cors
+
+ (called from <top (required)> at /Users/marksweet/wdi/projects/project3/config/environment.rb:5)
+Started POST "/foods" for 127.0.0.1 at 2016-11-02 16:48:49 -0400
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from raise_in_transactional_callbacks= at /Users/marksweet/.rvm/gems/ruby-2.3.1/gems/activerecord-5.0.0.1/lib/active_record/transactions.rb:283)
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by FoodsController#create as HTML
+  Parameters: {"location"=>"rockville", "food"=>{"location"=>"rockville"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "foods" ("location", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["location", "rockville"], ["created_at", 2016-11-02 20:48:49 UTC], ["updated_at", 2016-11-02 20:48:49 UTC]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Started POST "/foods" for 127.0.0.1 at 2016-11-02 16:48:51 -0400
+Processing by FoodsController#create as HTML
+  Parameters: {"location"=>"rockville", "food"=>{"location"=>"rockville"}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "foods" ("location", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["location", "rockville"], ["created_at", 2016-11-02 20:48:51 UTC], ["updated_at", 2016-11-02 20:48:51 UTC]]
+  [1m[35m (3.2ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 2445ms (Views: 1.0ms | ActiveRecord: 7.1ms)
+
+
+Started GET "/foods/10" for 127.0.0.1 at 2016-11-02 16:48:52 -0400
+Processing by FoodsController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mFood Load (1.0ms)[0m  [1m[34mSELECT  "foods".* FROM "foods" WHERE "foods"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+Completed 200 OK in 807ms (Views: 0.9ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/foods/11" for 127.0.0.1 at 2016-11-02 16:48:52 -0400
+Processing by FoodsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mFood Load (0.4ms)[0m  [1m[34mSELECT  "foods".* FROM "foods" WHERE "foods"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+Completed 200 OK in 735ms (Views: 16.6ms | ActiveRecord: 1.3ms)
+
+
+Completed 200 OK in 745ms (Views: 17.6ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/visits?address=12401+Parklawn+Dr+Rockville,+MD+20852&name=La+Brasa+Latin+Cuisine&phone=3014688850&yelp_id=la-brasa-latin-cuisine-rockville" for 127.0.0.1 at 2016-11-02 16:48:59 -0400
+Processing by VisitsController#create as HTML
+  Parameters: {"address"=>"12401 Parklawn Dr Rockville, MD 20852", "name"=>"La Brasa Latin Cuisine", "phone"=>"3014688850", "yelp_id"=>"la-brasa-latin-cuisine-rockville", "visit"=>{}}
+Unpermitted parameter: visit
+  [1m[36mVisit Load (1.5ms)[0m  [1m[34mSELECT  "visits".* FROM "visits" WHERE "visits"."name" = $1 AND "visits"."address" = $2 AND "visits"."yelp_id" = $3 AND "visits"."phone" = $4 LIMIT $5[0m  [["name", "La Brasa Latin Cuisine"], ["address", "12401 Parklawn Dr Rockville, MD 20852"], ["yelp_id", "la-brasa-latin-cuisine-rockville"], ["phone", "3014688850"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "visits" ("name", "created_at", "updated_at", "address", "phone", "yelp_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "La Brasa Latin Cuisine"], ["created_at", 2016-11-02 20:49:00 UTC], ["updated_at", 2016-11-02 20:49:00 UTC], ["address", "12401 Parklawn Dr Rockville, MD 20852"], ["phone", "3014688850"], ["yelp_id", "la-brasa-latin-cuisine-rockville"]]
+  [1m[35m (2.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[33mUPDATE "visits" SET "count" = COALESCE("count", 0) + 1 WHERE "visits"."id" = $1[0m  [["id", 5]]
+Completed 200 OK in 24ms (Views: 0.8ms | ActiveRecord: 10.4ms)
+
+
+DEPRECATION WARNING: Passing strings or symbols to the middleware builder is deprecated, please change
+them to actual class references.  For example:
+
+  "Rack::Cors" => Rack::Cors
+
+ (called from <top (required)> at /Users/marksweet/wdi/projects/project3/config/environment.rb:5)
+Started POST "/foods" for 127.0.0.1 at 2016-11-02 16:49:40 -0400
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from raise_in_transactional_callbacks= at /Users/marksweet/.rvm/gems/ruby-2.3.1/gems/activerecord-5.0.0.1/lib/active_record/transactions.rb:283)
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by FoodsController#create as HTML
+  Parameters: {"location"=>"washington dc", "food"=>{"location"=>"washington dc"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "foods" ("location", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["location", "washington dc"], ["created_at", 2016-11-02 20:49:41 UTC], ["updated_at", 2016-11-02 20:49:41 UTC]]
+  [1m[35m (3.1ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 1232ms (Views: 0.9ms | ActiveRecord: 9.9ms)
+
+
+Started GET "/foods/12" for 127.0.0.1 at 2016-11-02 16:49:42 -0400
+Processing by FoodsController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mFood Load (0.6ms)[0m  [1m[34mSELECT  "foods".* FROM "foods" WHERE "foods"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+Completed 200 OK in 927ms (Views: 20.2ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/visits?address=808+V+St+NW+Washington,+DC+20001&name=Hazel&phone=2028474980&yelp_id=hazel-washington" for 127.0.0.1 at 2016-11-02 16:49:47 -0400
+Processing by VisitsController#create as HTML
+  Parameters: {"address"=>"808 V St NW Washington, DC 20001", "name"=>"Hazel", "phone"=>"2028474980", "yelp_id"=>"hazel-washington", "visit"=>{}}
+Unpermitted parameter: visit
+  [1m[36mVisit Load (1.8ms)[0m  [1m[34mSELECT  "visits".* FROM "visits" WHERE "visits"."name" = $1 AND "visits"."address" = $2 AND "visits"."yelp_id" = $3 AND "visits"."phone" = $4 LIMIT $5[0m  [["name", "Hazel"], ["address", "808 V St NW Washington, DC 20001"], ["yelp_id", "hazel-washington"], ["phone", "2028474980"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "visits" ("name", "created_at", "updated_at", "address", "phone", "yelp_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Hazel"], ["created_at", 2016-11-02 20:49:47 UTC], ["updated_at", 2016-11-02 20:49:47 UTC], ["address", "808 V St NW Washington, DC 20001"], ["phone", "2028474980"], ["yelp_id", "hazel-washington"]]
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[33mUPDATE "visits" SET "count" = COALESCE("count", 0) + 1 WHERE "visits"."id" = $1[0m  [["id", 6]]
+Completed 200 OK in 28ms (Views: 0.6ms | ActiveRecord: 11.9ms)
+
+
+Started POST "/foods" for 127.0.0.1 at 2016-11-02 16:49:53 -0400
+Processing by FoodsController#create as HTML
+  Parameters: {"location"=>"austin", "food"=>{"location"=>"austin"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "foods" ("location", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["location", "austin"], ["created_at", 2016-11-02 20:49:53 UTC], ["updated_at", 2016-11-02 20:49:53 UTC]]
+  [1m[35m (3.1ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 772ms (Views: 0.8ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/foods/13" for 127.0.0.1 at 2016-11-02 16:49:53 -0400
+Processing by FoodsController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mFood Load (0.4ms)[0m  [1m[34mSELECT  "foods".* FROM "foods" WHERE "foods"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+Completed 200 OK in 673ms (Views: 19.0ms | ActiveRecord: 0.4ms)
+
+
