@@ -2690,3 +2690,33 @@ Unpermitted parameter: visit
 Completed 200 OK in 16ms (Views: 0.7ms | ActiveRecord: 6.5ms)
 
 
+DEPRECATION WARNING: Passing strings or symbols to the middleware builder is deprecated, please change
+them to actual class references.  For example:
+
+  "Rack::Cors" => Rack::Cors
+
+ (called from <top (required)> at /Users/marksweet/wdi/projects/project3/config/environment.rb:5)
+Started GET "/foods" for 127.0.0.1 at 2016-11-02 14:39:31 -0400
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from raise_in_transactional_callbacks= at /Users/marksweet/.rvm/gems/ruby-2.3.1/gems/activerecord-5.0.0.1/lib/active_record/transactions.rb:283)
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by FoodsController#index as HTML
+  [1m[36mFood Load (0.9ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+Completed 200 OK in 29ms (Views: 7.9ms | ActiveRecord: 8.5ms)
+
+
+Started POST "/foods" for 127.0.0.1 at 2016-11-02 15:13:06 -0400
+Processing by FoodsController#create as HTML
+  Parameters: {"location"=>"rockville", "food"=>{"location"=>"rockville"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "foods" ("location", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["location", "rockville"], ["created_at", 2016-11-02 19:13:06 UTC], ["updated_at", 2016-11-02 19:13:06 UTC]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 1206ms (Views: 0.5ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/foods/8" for 127.0.0.1 at 2016-11-02 15:13:07 -0400
+Processing by FoodsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mFood Load (0.6ms)[0m  [1m[34mSELECT  "foods".* FROM "foods" WHERE "foods"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+Completed 200 OK in 657ms (Views: 17.3ms | ActiveRecord: 1.0ms)
+
+
